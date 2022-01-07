@@ -4,8 +4,8 @@
     "postinstall": "husky install",
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint './src/**/*.{js,ts,tsx,vue,md}'",
-    "lint:fix": "eslint './src/**/*.{js,ts,tsx,vue,md}' --fix"
+    "lint": "eslint './src/**/*.{js,ts,tsx,vue,md}' --no-error-on-unmatched-pattern",
+    "lint:fix": "eslint './src/**/*.{js,ts,tsx,vue,md}' --fix --no-error-on-unmatched-pattern"
   },
   "dependencies": {
     "@vue/composition-api": "^1.2.4",
