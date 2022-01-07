@@ -12,18 +12,18 @@
     <div
       class="flex flex-col items-center text-center lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 md:items-start md:text-left"
     >
-      <Heading1> Vite ⚡ - Vue 2 starter template </Heading1>
+      <Heading1>Vite ⚡ - Vue 2 starter template</Heading1>
       <p class="mb-8 leading-relaxed dark:text-gray-300">
         This example project shows how to speed up your Vue 2 application with
         the next generation frontend tooling Vite.
       </p>
       <div class="flex justify-center">
         <a href="https://vuejs.org/v2/guide/" target="_blank">
-          <ButtonPrimary> Vue docs </ButtonPrimary>
+          <ButtonPrimary>Vue docs</ButtonPrimary>
         </a>
 
         <RouterLink :to="{ name: 'About' }">
-          <ButtonSecondary> About </ButtonSecondary>
+          <ButtonSecondary>About</ButtonSecondary>
         </RouterLink>
       </div>
     </div>

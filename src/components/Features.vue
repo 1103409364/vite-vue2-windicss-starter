@@ -1,7 +1,7 @@
 <template>
   <section class="container px-5 py-12 mx-auto text-gray-600 body-font">
     <div class="flex flex-col w-full mb-8 text-center">
-      <Heading1> Installed Vite plugins 📦 </Heading1>
+      <Heading1>Installed Vite plugins 📦</Heading1>
       <p class="dark:text-gray-300">
         You can even find more awesome Vite plugins
         <a
