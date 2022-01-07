@@ -13,7 +13,7 @@
       class="flex flex-col items-center text-center lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 md:items-start md:text-left"
     >
       <Heading1>Vite ⚡ - Vue 2 starter template</Heading1>
-      <p class="mb-8 leading-relaxed dark:text-gray-300">
+      <p class="test mb-8 leading-relaxed dark:text-gray-300">
         This example project shows how to speed up your Vue 2 application with
         the next generation frontend tooling Vite.
       </p>
@@ -29,3 +29,10 @@
     </div>
   </section>
 </template>
+<style lang="scss" scoped>
+.test {
+  display: block;
+  width: 500px;
+  color: red;
+}
+</style>
