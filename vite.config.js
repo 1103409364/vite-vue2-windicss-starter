@@ -1,6 +1,7 @@
 import path from "path";
 import { defineConfig } from "vite";
 import { createVuePlugin } from "vite-plugin-vue2";
+import legacy from "@vitejs/plugin-legacy";
 import WindiCSS from "vite-plugin-windicss";
 import Components from "unplugin-vue-components/vite";
 import Icons from "unplugin-icons/vite";
@@ -19,6 +20,10 @@ const config = defineConfig({
   },
 
   plugins: [
+    legacy({
+      targets: ["ie >= 11"],
+      additionalLegacyPolyfills: ["regenerator-runtime/runtime"],
+    }),
     createVuePlugin(),
     WindiCSS(),
     Components({
