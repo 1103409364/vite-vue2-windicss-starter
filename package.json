@@ -4,8 +4,9 @@
     "postinstall": "husky install",
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint './src/**/*.{js,ts,tsx,vue,md}' --no-error-on-unmatched-pattern",
-    "lint:fix": "eslint './src/**/*.{js,ts,tsx,vue,md}' --fix --no-error-on-unmatched-pattern"
+    "lint": "eslint --ext .ts,.js,.vue src --no-error-on-unmatched-pattern",
+    "lint:fix": "eslint --fix --ext .ts,.js,.vue src  --no-error-on-unmatched-pattern",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@vue/composition-api": "^1.2.4",
@@ -26,6 +27,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^7.19.1",
     "husky": "^7.0.2",
+    "lint-staged": "^12.1.6",
     "prettier": "2.2.1",
     "typescript": "^4.4.4",
     "unplugin-icons": "^0.12.16",
@@ -34,5 +36,9 @@
     "vite-plugin-vue2": "^1.9.0",
     "vite-plugin-windicss": "^1.4.11",
     "vue-template-compiler": "^2.6.14"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,vue,md}": "eslint --fix",
+    "*.css": "stylelint --fix"
   }
 }
