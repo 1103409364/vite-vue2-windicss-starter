@@ -43,6 +43,6 @@
   },
   "lint-staged": {
     "*.{js,ts,tsx,vue,md}": "eslint --fix",
-    "*.css": "stylelint --fix"
+    "*.{vue,css,scss}": "stylelint --fix"
   }
 }
