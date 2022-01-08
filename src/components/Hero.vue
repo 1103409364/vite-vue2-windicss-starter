@@ -32,7 +32,9 @@ export default defineComponent({
     };
 
     console.log("created", props);
-    onMounted(() => console.log("mounted "));
+    onMounted(() => {
+      console.log("mounted import.meta.env.MOD", import.meta.env);
+    });
     return { value, userName, switchLang };
   },
 });

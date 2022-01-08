@@ -1,12 +1,24 @@
+interface IUrlMap {
+  [key: string]: string;
+}
+
+const baseUrlMap: IUrlMap = {
+  development: "",
+  test: "",
+  uat: "",
+  production: "",
+  staging: "",
+};
+
 /**
  * @description 网路配置
  **/
 const network = {
-  // 默认的接口地址 如果是开发环境和生产环境走vab-mock-server
-  baseURL:
-    import.meta.env.MODE === "development"
-      ? "vab-mock-server"
-      : "vab-mock-server",
+  // 默认的接口地址 如果是开发环境和生产环境走mock-server
+  baseURL: baseUrlMap[import.meta.env.MODE || "development"],
+  // import.meta.env.MODE === "development"
+  //   ? "mock-server"
+  //   : "mock-server",
   //后端数据的接收方式application/json;charset=UTF-8或者application/x-www-form-urlencoded;charset=UTF-8
   contentType: "application/json;charset=UTF-8",
   Accept: "application/json",

@@ -1,11 +1,15 @@
 {
   "private": true,
   "scripts": {
-    "postinstall": "husky install",
     "dev": "vite",
+    "test": "vite --mode test",
     "build": "vite build",
+    "build:test": "vite build  --mode test",
+    "build:uat": "vite build  --mode uat",
+    "build:staging": "vite build  --mode staging",
     "lint": "eslint --ext .ts,.js,.vue src --no-error-on-unmatched-pattern",
     "lint:fix": "eslint --fix --ext .ts,.js,.vue src  --no-error-on-unmatched-pattern",
+    "postinstall": "husky install",
     "prepare": "husky install"
   },
   "dependencies": {
