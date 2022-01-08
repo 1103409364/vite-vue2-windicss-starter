@@ -40,6 +40,15 @@ const config = defineConfig({
 
   server: {
     port: 8080,
+    proxy: {
+      // 类型： Record<string, string | ProxyOp 为开发服务器配置自定义代理规则
+      "/api": {
+        target: "http://106.12.45.247:3000/",
+        changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace("/api", ""),
+      },
+    },
   },
 });
 
