@@ -19,6 +19,7 @@
         This example project shows how to speed up your Vue 2 application with
         the next generation frontend tooling Vite.
       </p>
+      <p>userName：{{ userName }}</p>
       <div class="flex justify-center">
         <a href="https://vuejs.org/v2/guide/" target="_blank">
           <ButtonPrimary>Vue docs</ButtonPrimary>
@@ -31,6 +32,25 @@
     </div>
   </section>
 </template>
+// 支持vue2 的 options api
+<script lang="ts">
+import { defineComponent } from "vue-demi";
+
+export default defineComponent({
+  data() {
+    return { a: 1 };
+  },
+  computed: {
+    userName(): string {
+      return this.$store.getters["user/userName"];
+    },
+  },
+  methods: {},
+  created() {
+    console.log("created");
+  },
+});
+</script>
 <style lang="scss" scoped>
 .test {
   display: block;

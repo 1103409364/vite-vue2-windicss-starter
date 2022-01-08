@@ -69,8 +69,15 @@ export default defineComponent({
 
     const isDark = useDark();
     const toggle = useToggle(isDark);
-
-    return { appName, routes: availableRoutes, currentRoute, toggle, isDark };
+    const user = ctx.root.$store.state;
+    return {
+      appName,
+      routes: availableRoutes,
+      currentRoute,
+      toggle,
+      isDark,
+      user,
+    };
   },
 });
 </script>

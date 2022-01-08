@@ -13,5 +13,6 @@ declare global {
 
   interface ImportMeta {
     env: Record<any, string>;
+    globEager<T = unknown>(globPath: string): Record<string, T>;
   }
 }

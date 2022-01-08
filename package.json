@@ -15,7 +15,8 @@
     "element-ui": "^2.15.6",
     "vue": "^2.6.14",
     "vue-demi": "^0.12.1",
-    "vue-router": "^3.5.3"
+    "vue-router": "^3.5.3",
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
     "@iconify/json": "^1.1.415",
