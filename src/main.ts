@@ -6,6 +6,8 @@ import router from "@/router";
 import store from "./store";
 import ElementUI from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
+import i18n from "@/lang/index";
+
 Vue.use(ElementUI);
 Vue.config.productionTip = false;
 Vue.config.devtools = true;
@@ -13,6 +15,7 @@ Vue.config.devtools = true;
 const app = createApp({
   router,
   store,
+  i18n,
   render: () => h(App),
 });
 
