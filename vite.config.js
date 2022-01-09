@@ -43,6 +43,7 @@ const config = defineConfig({
     preprocessorOptions: {
       scss: {
         quietDeps: true, // 减少sass警告 Using / for division is deprecated
+        charset: false,
         additionalData: `@import "@/styles/index.scss";`,
       },
     },
