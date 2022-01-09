@@ -1,10 +1,10 @@
-interface IUserProp {
+interface UserProp {
   name: string;
   age: number;
 }
 
-interface IState {
-  userInfo: IUserProp;
+interface State {
+  userInfo: UserProp;
 }
 
 const state = {
@@ -15,13 +15,13 @@ const state = {
 };
 
 const getters = {
-  userName(state: IState) {
+  userName(state: State) {
     return state.userInfo.name;
   },
 };
 
 const mutations = {
-  SET_USER(state: IState, value: IUserProp) {
+  SET_USER(state: State, value: UserProp) {
     state.userInfo = value;
   },
 };

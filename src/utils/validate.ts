@@ -170,7 +170,7 @@ export function isChina(str: string) {
  * @param str
  * @returns {boolean}
  */
-export function isBlank(str: unknown) {
+export function isBlank(str: string) {
   return (
     str == null ||
     false ||

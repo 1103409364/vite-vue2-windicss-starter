@@ -17,7 +17,6 @@ const messages = {
     ...zhLocale,
   },
 };
-console.log(Cookies.get("language") || store.getters["setting/language"]);
 
 const i18n = new VueI18n({
   locale: Cookies.get("language") || store.getters["setting/language"],

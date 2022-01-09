@@ -10,7 +10,7 @@ const privateKey =
  * @param data
  * @returns {Promise<{param: PromiseLike<ArrayBuffer>}|*>}
  */
-export async function encryptedData(data) {
+export async function encryptedData(data: any) {
   let publicKey = "";
   const res = await getPublicKey();
   publicKey = res.data.publicKey;
@@ -24,9 +24,8 @@ export async function encryptedData(data) {
   encrypt.setPublicKey(
     `-----BEGIN PUBLIC KEY-----${publicKey}-----END PUBLIC KEY-----`
   );
-  data = encrypt.encrypt(JSON.stringify(data));
   return {
-    param: data,
+    param: encrypt.encrypt(JSON.stringify(data)),
   };
 }
 
@@ -36,11 +35,10 @@ export async function encryptedData(data) {
  * @param data
  * @returns {PromiseLike<ArrayBuffer>}
  */
-export function decryptedData(data) {
+export function decryptedData(data: unknown) {
   const decrypt = new JSEncrypt();
   decrypt.setPrivateKey(
     `-----BEGIN RSA PRIVATE KEY-----${privateKey}-----END RSA PRIVATE KEY-----`
   );
-  data = decrypt.decrypt(JSON.stringify(data));
-  return data;
+  return decrypt.decrypt(JSON.stringify(data));
 }

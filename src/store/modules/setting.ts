@@ -1,19 +1,15 @@
-interface IState {
-  language: string;
-}
-
 const state = {
   language: "zh",
 };
 
 const getters = {
-  language(state: IState) {
+  language(state: State) {
     return state.language;
   },
 };
 
 const mutations = {
-  SET_USER(state: IState, value: string) {
+  SET_USER(state: State, value: string) {
     state.language = value;
   },
 };

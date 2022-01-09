@@ -3,6 +3,7 @@ import VueRouter, { RouteConfig } from "vue-router";
 import Home from "@/views/Home.vue";
 import About from "@/views/About.vue";
 import NotFound from "@/views/NotFound.vue";
+import { publicPath, routerMode } from "@/config";
 
 Vue.use(VueRouter);
 
@@ -29,9 +30,17 @@ export const routes: RouteConfig[] = [
 ];
 
 const router = new VueRouter({
-  base: "/",
-  mode: "history",
+  base: publicPath,
+  mode: routerMode,
+  scrollBehavior: () => ({
+    x: 0,
+    y: 0,
+  }),
   routes,
 });
+
+export function resetRouter() {
+  location.reload();
+}
 
 export default router;

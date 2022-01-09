@@ -36,7 +36,7 @@ const handleCode = (code: string, msg: string | null) => {
         duration: errMsgDuration,
       });
       // TODO:清除token
-      store.dispatch("user/resetAccessToken").catch((e) => console.log(e));
+      store.dispatch("user/resetAccessToken").catch((e) => console.error(e));
       if (loginIntercept) {
         location.reload();
       }

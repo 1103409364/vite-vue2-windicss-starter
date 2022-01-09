@@ -13,10 +13,7 @@ interface FileModule {
 const requireModules = getModules();
 const modules: ModuleTree<Module<unknown, unknown>> = {};
 Object.keys(requireModules).forEach((key: string) => {
-  console.log("key", key);
-
   const moduleName = key.replace(/^\.\/.*\/(.*)\.\w+$/, "$1");
-  console.log("moduleName", moduleName);
   const module = requireModules[key] as FileModule;
   const storeModule = module.default || module;
   modules[moduleName] = { ...storeModule, namespaced: true };

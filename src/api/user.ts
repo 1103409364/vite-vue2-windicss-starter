@@ -1,12 +1,8 @@
 import request from "@/utils/request";
 import { encryptedData } from "@/utils/encrypt";
-import { loginRSA } from "@/config";
-interface IUser {
-  account: string;
-  password: string;
-}
+import { loginRSA, tokenName } from "@/config";
 
-export async function login(data: IUser) {
+export async function login(data: User) {
   loginRSA && (data = await encryptedData(data));
   return request({
     url: "/login",
@@ -15,10 +11,13 @@ export async function login(data: IUser) {
   });
 }
 
-export function userInfo() {
+export function userInfo(accessToken: string) {
   return request({
     url: "/users/info",
     method: "get",
+    data: {
+      [tokenName]: accessToken,
+    },
   });
 }
 
