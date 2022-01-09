@@ -1,8 +1,4 @@
-interface IUrlMap {
-  [key: string]: string;
-}
-
-export const baseUrlMap: IUrlMap = {
+export const baseUrlMap: UrlMap = {
   development: "mock-server", // mock-server
   test: "",
   uat: "",

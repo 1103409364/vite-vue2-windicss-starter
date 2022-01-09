@@ -13,7 +13,6 @@ import {
   recordRoute,
   routesWhiteList,
 } from "@/config";
-import { RouteConfig } from "vue-router";
 
 nProgress.configure({
   easing: "ease",
@@ -57,7 +56,7 @@ router.beforeResolve(async (to, from, next) => {
           } else if (authentication === "all") {
             accessRoutes = await store.dispatch("routes/setAllRoutes");
           }
-          accessRoutes.forEach((item: RouteConfig) => {
+          accessRoutes.forEach((item: RouteItem) => {
             router.addRoute(item);
           });
 

@@ -1,5 +1,5 @@
 import Vue from "vue";
-import VueRouter, { RouteConfig } from "vue-router";
+import VueRouter from "vue-router";
 import Home from "@/views/Home.vue";
 import About from "@/views/About.vue";
 import NotFound from "@/views/NotFound.vue";
@@ -7,7 +7,7 @@ import { publicPath, routerMode } from "@/config";
 
 Vue.use(VueRouter);
 
-export const routes: RouteConfig[] = [
+export const constantRoutes: Array<RouteItem> = [
   {
     path: "/",
     name: "Home",
@@ -28,6 +28,7 @@ export const routes: RouteConfig[] = [
     component: NotFound,
   },
 ];
+export const asyncRoutes = [];
 
 const router = new VueRouter({
   base: publicPath,
@@ -36,7 +37,7 @@ const router = new VueRouter({
     x: 0,
     y: 0,
   }),
-  routes,
+  routes: constantRoutes,
 });
 
 export function resetRouter() {

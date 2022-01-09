@@ -4,6 +4,7 @@ import { createApp, h } from "vue-demi";
 import { Message, Notification, MessageBox, Loading } from "element-ui";
 import "element-ui/lib/theme-chalk/index.css";
 import "windi.css";
+import "@/config/permission.config";
 import router from "@/router";
 import store from "./store";
 import i18n from "@/lang/index";

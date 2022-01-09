@@ -7,3 +7,7 @@ interface PermissionsState {
   avatar: string;
   permissions: Array<string>;
 }
+interface RoutesState {
+  routes: Array<RouteItem>;
+  partialRoutes: RouteItem[];
+}

@@ -41,3 +41,10 @@ export function getPublicKey() {
     method: "post",
   });
 }
+
+export function getRouterList() {
+  return request({
+    url: "/menu/navigate",
+    method: "post",
+  });
+}

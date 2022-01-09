@@ -58,7 +58,7 @@ export default defineComponent({
         });
 
       if (!res) return;
-      const { data } = await userInfo();
+      const { data } = await userInfo("token");
       user.avatar = data.user.avatar;
       user.username = data.user.username;
       user.email = data.user.email;

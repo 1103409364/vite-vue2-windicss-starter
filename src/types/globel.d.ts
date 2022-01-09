@@ -6,3 +6,21 @@ interface User {
   account: string;
   password: string;
 }
+interface UrlMap {
+  [key: string]: string;
+}
+
+interface RouteMeta {
+  title: string;
+  icon: string;
+  permissions?: Array<string>;
+}
+interface RouteItem {
+  path: string;
+  redirect?: string;
+  name: string;
+  hidden?: boolean;
+  component: vue.Component;
+  meta?: RouteMeta;
+  children?: Array<RouteItem>;
+}
