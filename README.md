@@ -8,8 +8,14 @@
 - 📦 [Components auto importing](https://github.com/antfu/unplugin-vue-components)
 - 😃 [Icons as Vue components](https://github.com/antfu/unplugin-icons) - powered by [Iconify](https://github.com/iconify/iconify)
 - 🧰 [VueUse](https://github.com/vueuse/vueuse) - collection of essential Vue Composition Utilities
-- 🔍 ESLint + Prettier
+- 🔍 ESLint + Prettier + StyleLint
 - 🦾 Typescript
+- 👌 element-ui
+- 👌 vue-i18n
+- 👌 vuex
+- 👌 axios
+- 👌 mockjs
+- 👌 nprogress
 
 # 📦 Vite plugins
 
@@ -21,20 +27,13 @@
   On demand components auto importing for Vite
 - [`unplugin-icons`](https://github.com/antfu/unplugin-icons) -
   Access thousands of icons as Vue components in Vite
+- @vitejs/plugin-legacy ie11
 
 # 🚀 Getting started
 
 ## GitHub Template
 
 [Create a repo from this template on GitHub](https://github.com/lstoeferle/vite-vue2-windicss-starter/generate)
-
-When you use this template, try follow the checklist to update your info properly
-
-- [ ] Rename `name` field in `package.json`
-- [ ] Change the author name in `LICENSE`
-- [ ] Change the app name in `.env`
-- [ ] Change the favicon in `public`
-- [ ] Clean up the README(s) and remove routes
 
 ## Clone
 
@@ -63,9 +62,3 @@ To build the App, run
 ```bash
 yarn build
 ```
-
-And you will see the generated files in `dist`, which are ready to be served.
-
-# Why
-
-Vue 3 is awesome, but we should not forget about supporting Vue 2 ♥️
