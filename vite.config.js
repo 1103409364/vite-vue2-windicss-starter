@@ -7,6 +7,7 @@ import ViteComponents from "unplugin-vue-components/vite";
 import { ElementUiResolver } from "unplugin-vue-components/resolvers";
 import Icons from "unplugin-icons/vite";
 import IconsResolver from "unplugin-icons/resolver";
+import { viteMockServe } from "vite-plugin-mock";
 
 const config = defineConfig({
   resolve: {
@@ -21,11 +22,11 @@ const config = defineConfig({
   },
 
   plugins: [
+    createVuePlugin(),
     legacy({
       targets: ["ie >= 11"],
       additionalLegacyPolyfills: ["regenerator-runtime/runtime"],
     }),
-    createVuePlugin(),
     WindiCSS(),
     ViteComponents({
       // dirs: ["src/components"], //自动导入自己的组件，默认src/components
@@ -37,6 +38,10 @@ const config = defineConfig({
       ],
     }),
     Icons(),
+    viteMockServe({
+      mockPath: "./src/mock",
+      supportTs: true,
+    }),
   ],
   // 指定传递给 CSS 预处理器的选项
   css: {

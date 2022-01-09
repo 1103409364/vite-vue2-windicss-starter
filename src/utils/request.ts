@@ -2,11 +2,9 @@ import axios, { AxiosRequestConfig } from "axios";
 import qs from "qs";
 import { Loading, Notification } from "element-ui";
 import { ElLoadingComponent } from "element-ui/types/loading";
-import config from "@/config";
 import store from "@/store";
 import router from "@/router";
-
-const {
+import {
   baseURL,
   contentType,
   Accept,
@@ -16,9 +14,9 @@ const {
   tokenInvalidCode,
   noPermissionCode,
   tokenName,
-  loginInterception,
+  loginIntercept,
   requestLoadingApi,
-} = config;
+} from "@/config";
 
 let loadingInstance: ElLoadingComponent;
 let loadCount = 0;
@@ -39,7 +37,7 @@ const handleCode = (code: string, msg: string | null) => {
       });
       // TODO:清除token
       store.dispatch("user/resetAccessToken").catch((e) => console.log(e));
-      if (loginInterception) {
+      if (loginIntercept) {
         location.reload();
       }
       break;

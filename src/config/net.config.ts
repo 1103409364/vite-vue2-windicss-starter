@@ -1,42 +1,14 @@
-interface IUrlMap {
-  [key: string]: string;
-}
+import { baseUrlMap } from "./baseUrl.config";
 
-const baseUrlMap: IUrlMap = {
-  development: "",
-  test: "",
-  uat: "",
-  production: "",
-  staging: "",
-};
-
-/**
- * @description 网路配置
- **/
-const network = {
-  // 默认的接口地址 如果是开发环境和生产环境走mock-server
-  baseURL: baseUrlMap[import.meta.env.MODE || "development"],
-  // import.meta.env.MODE === "development"
-  //   ? "mock-server"
-  //   : "mock-server",
-  //后端数据的接收方式application/json;charset=UTF-8或者application/x-www-form-urlencoded;charset=UTF-8
-  contentType: "application/json;charset=UTF-8",
-  Accept: "application/json",
-  //最长请求时间
-  requestTimeout: 1000 * 10,
-  errMsgDuration: 1000 * 3,
-  //操作正常Code数组
-  successCode: [200],
-  //登录失效code
-  tokenInvalidCode: 402,
-  //无权限code
-  noPermissionCode: 401,
-  //token名称
-  tokenName: "",
-  // 是否开启登陆拦截
-  loginInterception: true,
-  //需要加loading层的请求，填写url中的某个关键字 * 表示所有
-  requestLoadingApi: ["*"],
-};
-
-export default network;
+export const baseURL = baseUrlMap[import.meta.env.MODE || "development"];
+//后端数据的接收方式application/json;charset=UTF-8或者application/x-www-form-urlencoded;charset=UTF-8
+export const contentType = "application/json;charset=UTF-8";
+export const Accept = "application/json";
+export const requestTimeout = 1000 * 10; //请求超时时间
+export const errMsgDuration = 1000 * 3;
+export const successCode = [200]; //请求正常的Code
+export const tokenInvalidCode = 402; //登录失效code
+export const noPermissionCode = 401; //无权限code
+export const tokenName = ""; //token名称
+export const loginIntercept = true; // 是否开启登陆拦截
+export const requestLoadingApi = ["*"]; //需要加loading层的请求，填写url中的某个关键字 * 表示所有

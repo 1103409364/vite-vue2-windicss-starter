@@ -1,7 +1,2 @@
-import network from "./net.config";
-import setting from "./setting.config";
-
-export default {
-  ...network,
-  ...setting,
-};
+export * from "./net.config";
+export * from "./setting.config";

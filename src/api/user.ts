@@ -1,8 +1,6 @@
 import request from "@/utils/request";
 import { encryptedData } from "@/utils/encrypt";
-import config from "@/config";
-const { loginRSA, tokenName } = config;
-
+import { loginRSA } from "@/config";
 interface IUser {
   account: string;
   password: string;
@@ -17,13 +15,10 @@ export async function login(data: IUser) {
   });
 }
 
-export function getUserInfo(accessToken: string) {
+export function userInfo() {
   return request({
-    url: "/userInfo",
-    method: "post",
-    data: {
-      [tokenName]: accessToken,
-    },
+    url: "/users/info",
+    method: "get",
   });
 }
 

@@ -52,6 +52,7 @@
     "dstc",
     "fmoney",
     "iconify",
+    "mockjs",
     "scripthost",
     "stylelint",
     "thirdparty",
@@ -59,6 +60,7 @@
     "vite",
     "vitejs",
     "vueuse",
+    "windi",
     "windicss"
   ]
 }
