@@ -8,8 +8,10 @@ import { ElementUiResolver } from "unplugin-vue-components/resolvers";
 import Icons from "unplugin-icons/vite";
 import IconsResolver from "unplugin-icons/resolver";
 import { viteMockServe } from "vite-plugin-mock";
+import { publicPath } from "./src/config/setting.config.ts";
 
 const config = defineConfig({
+  base: publicPath,
   resolve: {
     alias: {
       "@": `${path.resolve(__dirname, "src")}`,
