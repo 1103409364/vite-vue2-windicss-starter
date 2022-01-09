@@ -6,7 +6,6 @@
 - 🚦 [Vue-Router](https://github.com/vuejs/vue-router)
 - 🎨 [Windi CSS](https://github.com/windicss/vite-plugin-windicss) - on-demand Tailwind CSS with speed and dark mode
 - 📦 [Components auto importing](https://github.com/antfu/unplugin-vue-components)
-- 😃 [Icons as Vue components](https://github.com/antfu/unplugin-icons) - powered by [Iconify](https://github.com/iconify/iconify)
 - 🧰 [VueUse](https://github.com/vueuse/vueuse) - collection of essential Vue Composition Utilities
 - 🔍 ESLint + Prettier + StyleLint
 - 🦾 Typescript
@@ -27,7 +26,9 @@
   On demand components auto importing for Vite
 - [`unplugin-icons`](https://github.com/antfu/unplugin-icons) -
   Access thousands of icons as Vue components in Vite
-- @vitejs/plugin-legacy ie11
+- [`vite-plugin-svg-icons`](https://github.com/vbenjs/vite-plugin-svg-icons/blob/HEAD/README.zh_CN.md) -
+- [`@vitejs/plugin-legacy`](https://www.npmjs.com/package/@vitejs/plugin-legacy) -
+  Vite's default browser support baseline is Native ESM. This plugin provides support for legacy browsers that do not support native ESM.
 
 # 🚀 Getting started
 

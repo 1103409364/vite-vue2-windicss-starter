@@ -1,12 +1,11 @@
 import path from "path";
 import { defineConfig } from "vite"; //loadEnv
 import { createVuePlugin } from "vite-plugin-vue2";
+import viteSvgIcons from "vite-plugin-svg-icons";
 import legacy from "@vitejs/plugin-legacy";
 import WindiCSS from "vite-plugin-windicss";
 import ViteComponents from "unplugin-vue-components/vite";
 import { ElementUiResolver } from "unplugin-vue-components/resolvers";
-import Icons from "unplugin-icons/vite";
-import IconsResolver from "unplugin-icons/resolver";
 import { viteMockServe } from "vite-plugin-mock";
 import { publicPath } from "./src/config/setting.config.ts";
 
@@ -34,12 +33,12 @@ const config = defineConfig({
       // dirs: ["src/components"], //自动导入自己的组件，默认src/components
       resolvers: [
         ElementUiResolver(), //ElementUi组件按需自动导入
-        IconsResolver({
-          componentPrefix: "",
-        }),
       ],
     }),
-    Icons(),
+    viteSvgIcons({
+      iconDirs: [path.resolve(process.cwd(), "src/assets/icons")], // 指定需要缓存的图标文件夹
+      symbolId: "icon-[dir]-[name]", // 指定symbolId格式
+    }),
     viteMockServe({
       mockPath: "./src/mock",
       supportTs: true,

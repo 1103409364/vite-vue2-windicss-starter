@@ -7,6 +7,7 @@ import "@/config/permission.config";
 import router from "@/router";
 import store from "./store";
 import i18n from "@/lang/index";
+import "virtual:svg-icons-register";
 
 Vue.config.productionTip = false;
 if (import.meta.env.MODE !== "production") {

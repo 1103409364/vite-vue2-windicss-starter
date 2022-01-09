@@ -14,6 +14,8 @@
       <p class="test mb-8 leading-relaxed dark:text-gray-300">
         This example project shows how to speed up your Vue 2 application with
         the next generation frontend tooling Vite.
+        <SvgIcon class="icon" name="vue"></SvgIcon>
+        <SvgIcon class="icon" name="vite"></SvgIcon>
       </p>
 
       <div>
@@ -119,5 +121,10 @@ export default defineComponent({
   display: block;
   width: 500px;
   color: $red;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
 }
 </style>
