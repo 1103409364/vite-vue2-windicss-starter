@@ -28,8 +28,9 @@ const config = defineConfig({
     createVuePlugin(),
     WindiCSS(),
     ViteComponents({
+      // dirs: ["src/components"], //自动导入自己的组件，默认src/components
       resolvers: [
-        ElementUiResolver(),
+        ElementUiResolver(), //ElementUi组件按需自动导入
         IconsResolver({
           componentPrefix: "",
         }),
@@ -37,6 +38,14 @@ const config = defineConfig({
     }),
     Icons(),
   ],
+  // 指定传递给 CSS 预处理器的选项
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "@/styles/index.scss";`,
+      },
+    },
+  },
 
   server: {
     port: 8080,

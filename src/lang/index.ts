@@ -7,16 +7,17 @@ import locale from "element-ui/lib/locale";
 Vue.use(VueI18n);
 
 import enLocale from "./en";
-import cnLocale from "./zh";
+import zhLocale from "./zh";
 
 const messages = {
   en: {
     ...enLocale,
   },
   zh: {
-    ...cnLocale,
+    ...zhLocale,
   },
 };
+console.log(Cookies.get("language") || store.getters["setting/language"]);
 
 const i18n = new VueI18n({
   locale: Cookies.get("language") || store.getters["setting/language"],

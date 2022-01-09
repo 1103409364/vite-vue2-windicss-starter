@@ -6,7 +6,7 @@
       class="flex flex-col items-center text-center lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 md:items-start md:text-left"
     >
       <Heading1>Vite ⚡ - Vue 2 starter template</Heading1>
-      <ElButton @click="switchLang">切换中英文</ElButton>
+      <ElButton type="primary" @click="switchLang">切换中英文</ElButton>
 
       <p class="test mb-8 leading-relaxed dark:text-gray-300">
         This example project shows how to speed up your Vue 2 application with
@@ -62,6 +62,6 @@ export default defineComponent({
 .test {
   display: block;
   width: 500px;
-  color: red;
+  color: $red;
 }
 </style>
