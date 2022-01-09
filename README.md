@@ -1,33 +1,25 @@
-<h1 align="center">Vite ⚡ - Vue 2 starter template</h1>
-
-<p align="center">
-  Create a Vue 2 application bundled by the lightning fast build tool <a href="https://github.com/vitejs/vite">Vite</a>
-</p>
-
-<p align="center">
- <a href="https://vite-vue2-starter.netlify.app"> ✨ Live Demo</a>
-</p>
+# Vite ⚡ - Vue 2 starter template
 
 # 🔥 Features
 
-* ⚡️ [Vite 2](https://github.com/vitejs/vite), [Vue 2](https://github.com/vuejs/vue) and [Composition-API](https://github.com/vuejs/composition-api)
-* 🚦 [Vue-Router](https://github.com/vuejs/vue-router)
-* 🎨 [Windi CSS](https://github.com/windicss/vite-plugin-windicss) - on-demand Tailwind CSS with speed and dark mode
-* 📦 [Components auto importing](https://github.com/antfu/unplugin-vue-components)
-* 😃 [Icons as Vue components](https://github.com/antfu/unplugin-icons) - powered by [Iconify](https://github.com/iconify/iconify)
-* 🧰 [VueUse](https://github.com/vueuse/vueuse) - collection of essential Vue Composition Utilities
-* 🔍 ESLint + Prettier
-* 🦾 Typescript
+- ⚡️ [Vite 2](https://github.com/vitejs/vite), [Vue 2](https://github.com/vuejs/vue) and [Composition-API](https://github.com/vuejs/composition-api)
+- 🚦 [Vue-Router](https://github.com/vuejs/vue-router)
+- 🎨 [Windi CSS](https://github.com/windicss/vite-plugin-windicss) - on-demand Tailwind CSS with speed and dark mode
+- 📦 [Components auto importing](https://github.com/antfu/unplugin-vue-components)
+- 😃 [Icons as Vue components](https://github.com/antfu/unplugin-icons) - powered by [Iconify](https://github.com/iconify/iconify)
+- 🧰 [VueUse](https://github.com/vueuse/vueuse) - collection of essential Vue Composition Utilities
+- 🔍 ESLint + Prettier
+- 🦾 Typescript
 
 # 📦 Vite plugins
 
-* [`vite-plugin-vue2`](https://github.com/underfin/vite-plugin-vue2) -
+- [`vite-plugin-vue2`](https://github.com/underfin/vite-plugin-vue2) -
   Vue 2 support for Vite
-* [`vite-plugin-windicss`](https://github.com/windicss/vite-plugin-windicss) -
+- [`vite-plugin-windicss`](https://github.com/windicss/vite-plugin-windicss) -
   WindiCSS/TailwindCSS for Vite
-* [`unplugin-vue-components`](https://github.com/antfu/unplugin-vue-components) -
+- [`unplugin-vue-components`](https://github.com/antfu/unplugin-vue-components) -
   On demand components auto importing for Vite
-* [`unplugin-icons`](https://github.com/antfu/unplugin-icons) -
+- [`unplugin-icons`](https://github.com/antfu/unplugin-icons) -
   Access thousands of icons as Vue components in Vite
 
 # 🚀 Getting started

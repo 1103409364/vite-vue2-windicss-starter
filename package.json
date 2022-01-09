@@ -55,7 +55,7 @@
     "vue-template-compiler": "^2.6.14"
   },
   "lint-staged": {
-    "*.{js,ts,tsx,vue,md}": "eslint --fix",
+    "*.{js,ts,tsx,vue}": "eslint --fix",
     "*.{vue,css,scss}": "stylelint --fix"
   }
 }
