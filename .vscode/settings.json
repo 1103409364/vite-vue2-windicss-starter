@@ -64,5 +64,8 @@
     "vueuse",
     "windi",
     "windicss"
+  ],
+  "i18n-ally.localesPaths": [
+    "src/lang"
   ]
 }
