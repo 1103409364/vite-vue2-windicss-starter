@@ -1,7 +1,5 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "@/views/Home.vue";
-import About from "@/views/About.vue";
 import NotFound from "@/views/NotFound.vue";
 import { publicPath, routerMode } from "@/config";
 
@@ -10,17 +8,8 @@ Vue.use(VueRouter);
 export const constantRoutes: Array<RouteItem> = [
   {
     path: "/",
-    name: "Home",
-    component: Home,
-  },
-  {
-    path: "/about",
-    name: "About",
-    // NOTE: you can also apply meta information
-    // meta: {authRequired: false }
-    component: About,
-    // NOTE: you can also lazy-load the component
-    // component: () => import("@/views/About.vue")
+    name: "HomePage",
+    component: () => import("@/views/HomePage.vue"),
   },
   {
     path: "/:path(.*)",

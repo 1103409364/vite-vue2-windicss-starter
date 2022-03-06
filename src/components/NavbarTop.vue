@@ -29,25 +29,25 @@
         >
           {{ route.name }}
         </RouterLink>
-        <RouterLink
+        <!-- <RouterLink
           class="flex items-center justify-center mr-2 text-black w-9 h-9 dark:text-white"
           to="/aliens"
         >
           <MdiAlien />
-        </RouterLink>
+        </RouterLink> -->
         <a
           href="https://github.com/lstoeferle/vite-vue2-windicss-starter"
           target="_blank"
           class="flex items-center justify-center mr-2 text-black w-9 h-9 dark:text-white"
         >
-          <MdiGithub />
+          <!-- <MdiGithub /> -->
         </a>
         <button
-          @click="toggle"
           class="flex items-center justify-center w-9 h-9 focus:outline-none"
+          @click="toggle"
         >
-          <MdiWhiteBalanceSunny class="text-yellow-500" v-if="isDark" />
-          <MdiMoonWaningCrescent class="text-gray-800" v-else />
+          <!-- <MdiWhiteBalanceSunny v-if="isDark" class="text-yellow-500" /> -->
+          <!-- <MdiMoonWaningCrescent v-else class="text-gray-800" /> -->
         </button>
       </nav>
     </div>
