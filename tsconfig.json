@@ -17,6 +17,9 @@
     },
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
+  "vueCompilerOptions": {
+    "experimentalCompatMode": 2
+  },
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",

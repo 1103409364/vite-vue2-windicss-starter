@@ -5,6 +5,7 @@ import viteSvgIcons from "vite-plugin-svg-icons";
 import legacy from "@vitejs/plugin-legacy";
 import WindiCSS from "vite-plugin-windicss";
 import ViteComponents from "unplugin-vue-components/vite";
+import ScriptSetup from "unplugin-vue2-script-setup/vite";
 import { ElementUiResolver } from "unplugin-vue-components/resolvers";
 import { viteMockServe } from "vite-plugin-mock";
 import { publicPath } from "./src/config/setting.config.ts";
@@ -24,13 +25,14 @@ const config = defineConfig({
 
   plugins: [
     createVuePlugin(),
+    ScriptSetup({ reactivityTransform: false }),
     legacy({
       targets: ["ie >= 11"],
       additionalLegacyPolyfills: ["regenerator-runtime/runtime"],
     }),
     WindiCSS(),
     ViteComponents({
-      // dirs: ["src/components"], //自动导入自己的组件，默认src/components
+      dirs: ["src/components"], //自动导入自己的组件，默认src/components
       resolvers: [
         ElementUiResolver(), //ElementUi组件按需自动导入
       ],
