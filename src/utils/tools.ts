@@ -20,9 +20,9 @@ interface TreeNode {
 
 /**
  * 父子节点转树形
- * @param arr
- * @param id // id key 默认'id'
- * @param pId
+ * @param data
+ * @param idKey // id key 默认'id'
+ * @param pIdKey
  * @param topId  // 最顶级id 可选
  */
 export function dataToTree(
@@ -45,22 +45,35 @@ export function dataToTree(
   return result;
 }
 /**
- * 找节点
+ * 找节点 递归改广度优先（BFS）搜索算法
  * @param tree
  * @param id
  * @param idKey
  */
-export function findNode(
-  tree: TreeNode[],
-  id: string,
-  idKey: string
-): TreeNode | undefined {
-  for (let i = 0; i < tree.length; i++) {
-    const node = tree[i];
-    if (node[idKey] === id) return node;
-    if (node.children && node.children.length) {
-      const res = findNode(node.children, id, idKey);
-      if (res) return res;
+export function findNode(tree: TreeNode[], id: string, idKey: string) {
+  const queue = Array.isArray(tree) ? tree : [tree];
+  while (queue.length) {
+    const node = queue.shift();
+    if (node && node[idKey] === id) return node;
+    if (node && node.children) {
+      for (let i = 0; i < node.children.length; i++) {
+        queue.push(node.children[i]);
+      }
     }
   }
+  return null;
 }
+// export function findNode(
+//   tree: TreeNode[],
+//   id: string,
+//   idKey: string
+// ): TreeNode | undefined {
+//   for (let i = 0; i < tree.length; i++) {
+//     const node = tree[i];
+//     if (node[idKey] === id) return node;
+//     if (node.children && node.children.length) {
+//       const res = findNode(node.children, id, idKey);
+//       if (res) return res;
+//     }
+//   }
+// }
