@@ -10,10 +10,10 @@
     "lint": "eslint --ext .ts,.js,.vue src --no-error-on-unmatched-pattern",
     "lint:fix": "eslint --fix --ext .ts,.js,.vue src  --no-error-on-unmatched-pattern",
     "postinstall": "husky install",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "reinstall": "rm -rf node_modules && pnpm install"
   },
   "dependencies": {
-    "@vue/composition-api": "^1.4.3",
     "@vueuse/core": "^7.5.3",
     "axios": "^0.24.0",
     "core-js": "^3.20.2",
@@ -22,7 +22,7 @@
     "jsencrypt": "^3.2.1",
     "nprogress": "^0.2.0",
     "qs": "^6.10.2",
-    "vue": "^2.6.14",
+    "vue": "^2.7.14",
     "vue-demi": "^0.12.1",
     "vue-i18n": "^8.26.8",
     "vue-router": "^3.5.3",
