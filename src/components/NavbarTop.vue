@@ -55,30 +55,42 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from "vue-demi";
+import { computed, defineComponent } from "vue";
 import { constantRoutes } from "@/router";
+import {
+  ref,
+  reactive,
+  // getCurrentInstance
+} from "vue";
+import {
+  useRoute,
+  // useRouter,
+  // useLink,
+  // onBeforeRouteUpdate,
+  // onBeforeRouteLeave,
+} from "vue-router/composables";
 import { useDark, useToggle } from "@vueuse/core";
 
 export default defineComponent({
-  setup: (_, ctx) => {
+  setup: (_) => {
     // Import config from .evn
     const appName = import.meta.env.VITE_APP_NAME;
 
     const availableRoutes = constantRoutes.filter(
       (route) => route.name != "NotFound"
     );
-    const currentRoute = computed(() => ctx.root.$route.name);
+    const currentRoute = computed(() => useRoute().name);
 
     const isDark = useDark();
-    const toggle = useToggle(isDark);
-    const user = ctx.root.$store.state;
+    const toggle = () => useToggle(isDark);
+    // const user = ctx.root.$store.state;
     return {
       appName,
       routes: availableRoutes,
       currentRoute,
       toggle,
       isDark,
-      user,
+      // user,
     };
   },
 });

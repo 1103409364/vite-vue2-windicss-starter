@@ -1,6 +1,5 @@
 import Vue from "vue";
 import App from "@/App.vue";
-import { createApp, h } from "vue-demi";
 import "windi.css";
 import "@/config/element-ui.config";
 import "@/config/permission.config";
@@ -14,11 +13,10 @@ if (import.meta.env.MODE !== "production") {
   Vue.config.devtools = true;
 }
 
-const app = createApp({
+new Vue({
+  el: "#app",
   router,
   store,
   i18n,
-  render: () => h(App),
+  render: (h) => h(App),
 });
-
-app.mount("#app");
