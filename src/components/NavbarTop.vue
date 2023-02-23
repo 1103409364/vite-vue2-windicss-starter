@@ -44,7 +44,6 @@
         </a>
         <button
           class="flex items-center justify-center w-9 h-9 focus:outline-none"
-          @click="toggle"
         >
           <!-- <MdiWhiteBalanceSunny v-if="isDark" class="text-yellow-500" /> -->
           <!-- <MdiMoonWaningCrescent v-else class="text-gray-800" /> -->
@@ -57,11 +56,8 @@
 <script lang="ts">
 import { computed, defineComponent } from "vue";
 import { constantRoutes } from "@/router";
-import {
-  ref,
-  reactive,
-  // getCurrentInstance
-} from "vue";
+// import { ref, reactive, getCurrentInstance } from "vue";
+import { useStore } from "@/store";
 import {
   useRoute,
   // useRouter,
@@ -69,10 +65,9 @@ import {
   // onBeforeRouteUpdate,
   // onBeforeRouteLeave,
 } from "vue-router/composables";
-import { useDark, useToggle } from "@vueuse/core";
 
 export default defineComponent({
-  setup: (_) => {
+  setup: () => {
     // Import config from .evn
     const appName = import.meta.env.VITE_APP_NAME;
 
@@ -81,16 +76,13 @@ export default defineComponent({
     );
     const currentRoute = computed(() => useRoute().name);
 
-    const isDark = useDark();
-    const toggle = () => useToggle(isDark);
-    // const user = ctx.root.$store.state;
+    const user = useStore().state;
+
     return {
       appName,
       routes: availableRoutes,
       currentRoute,
-      toggle,
-      isDark,
-      // user,
+      user,
     };
   },
 });
