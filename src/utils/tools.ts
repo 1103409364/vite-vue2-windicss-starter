@@ -51,7 +51,7 @@ export function dataToTree(
  * @param idKey
  */
 export function findNode(tree: TreeNode[], id: string, idKey: string) {
-  const queue = Array.isArray(tree) ? tree : [tree];
+  const queue = Array.isArray(tree) ? [...tree] : [tree];
   while (queue.length) {
     const node = queue.shift();
     if (node && node[idKey] === id) return node;
